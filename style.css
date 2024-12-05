@@ -281,7 +281,7 @@ p{
 /* Style for our header texts
 * --------------------------------------- */
 h1{
-	font-size: 5em;
+	font-size: 3em;
 	font-family: arial,helvetica;
 	color: #fff;
 	margin:0;
@@ -289,6 +289,7 @@ h1{
 .section p,
 .intro p{
 	color: #fff;
+    font-size: 1.5em;
 }
 
 /* Centered texts in each section
@@ -307,25 +308,38 @@ h1{
 /* Sections backgrounds
 * --------------------------------------- */
 #section0{
-	background-image: linear-gradient(128deg,#40afff,#3f61ff);
+	background-image: url('img/bg/background.jpg');
 }
 
 #section1{
-	background-image: linear-gradient(128deg,#ff9a3f,#ff4b40);
+	background-image: url('img/bg/background.jpg');
 }
 
 #section2{
-	background-image: linear-gradient(128deg,#fc40ff,#543fff);
+	background-image: url('img/bg/background.jpg');
 }
 
 #section3{
-	background-image: linear-gradient(128deg,#40fff2,#3fbcff);
+	background-image: url('img/bg/background.jpg');
 }
 
 
 
+/* ———————————————————————————————————————————————————————————————————————————————————————————————————— */
 
-/* style for page 2 3 4 */
+
+h2 {
+    /* font-size: 3em; */
+	/* font-family: arial,helvetica; */
+	color: #E3D15B;
+	margin:0;
+}
+
+
+/* ———————————————————————————————————————————————————————————————————————————————————————————————————— */
+
+
+/* style for walking simulator */
     /* Container for Image and Text */
 .container {
     display: flex; /* Align items horizontally */
@@ -350,7 +364,7 @@ h1{
 }
 
 .image-container:hover {
-    max-width: 55%; /* Change size smoothly on hover */
+    max-width: 60%; /* Change size smoothly on hover */
 }
 
 
@@ -365,14 +379,13 @@ h1{
 .image-wrapper {
     flex-shrink: 0;
     width: 100%; /* Each slide takes full width of the container */
-    height: auto;
+    height: auto; /* Adjust automatically based on aspect ratio */
     position: relative;
-    transition: transform 0.3s ease-in-out;
+    aspect-ratio: 16 / 9; /* Adjust this to match your image's aspect ratio */
+    overflow: hidden; /* Ensures content outside the container is hidden */
+    transition: transform 0.5s ease-in-out;
 }
 
-.image-wrapper:hover {
-    transform: scale(1.1); /* Zoom effect */
-}
 
 .image-wrapper img {
     width: 100%;
@@ -388,17 +401,13 @@ h1{
     height: 100%;
     object-fit: cover;
     opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
     pointer-events: none; /* Prevent interaction with the video */
 }
 
 .image-wrapper:hover video {
     opacity: 1; /* Show video on hover */
 }
-
-
-
-
 
 
 /* Text Container */
@@ -429,10 +438,11 @@ h1{
 .text-container .details {
     font-size: 1rem;
     margin-top: 10px;
+    color: #E3D15B;
 }
 
 .text-container .details a {
-    color: #007BFF; /* Link color */
+    color: #3E79A8; /* Link color */
     text-decoration: none; /* Removes underline */
 }
 
@@ -467,13 +477,159 @@ h1{
 }
 
 .controls button:hover {
-    background: rgba(255, 255, 255, 0.5);
-    color: #888;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
 }
 
 /* Highlight active button */
 .controls button.active {
-    color: #00ffff; /* Active button text color */
+    color: #E3D15B; /* Active button text color */
     font-weight: bold; /* Makes the text bold */
-    border-bottom: 2px solid #00ffff; /* Optional: underline or border */
+    border-bottom: 2px solid #E3D15B; /* Optional: underline or border */
 }
+
+
+
+
+
+/* style for point & click */
+
+/* image container */
+.point-click-container {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0 40px 0 0;
+    transition: max-width 0.5s ease-in-out; /* Smooth zoom effect */
+}
+
+.point-click-container:hover {
+    max-width: 60%; /* Change size smoothly on hover */
+}
+
+
+
+/* slider */
+.point-click-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    width: calc(100%); /* Dynamically set based on the number of slides */
+}
+
+
+/* image wapper */
+.point-click-image-wrapper {
+    flex-shrink: 0;
+    width: 100%; /* Each slide takes full width of the container */
+    height: auto;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.point-click-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.point-click-image-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none; /* Prevent interaction with the video */
+}
+
+.point-click-image-wrapper:hover video {
+    opacity: 1; /* Show video on hover */
+}
+
+
+/* text container */
+.point-click-text-container {
+    flex: 1; /* Takes up equal space with the image */
+    max-width: 40%; /* Ensures the text doesn't exceed half the width */
+    display: flex;
+    flex-direction: column; /* Stacks text and controls vertically */
+    justify-content: flex-start; /* Aligns content to the top */
+    text-align: left; /* Justifies text to the left */
+    gap: 15px; /* Space between elements */
+}
+
+.point-click-text-container h2,
+.point-click-text-container p,
+.point-click-text-container .details {
+    text-align: left; /* Ensures all child text elements are left-justified */
+}
+
+.point-click-text-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.point-click-text-container p {
+    font-size: 1.2rem;
+    line-height: 1.5; /* Improves readability */
+}
+
+.point-click-text-container .details {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* .point-click-text-container .details a {
+    color: #007BFF; 
+    text-decoration: none; 
+} */
+
+.point-click-text-container .details a:hover {
+    text-decoration: underline; /* Underlines on hover */
+}
+
+
+/* control */
+.point-click-controls {
+    display: flex;
+    align-items: center; /* Centers the arrows and buttons */
+    gap: 10px; /* Space between controls */
+}
+
+.point-click-controls img.arrow {
+    width: 30px; /* Size of the arrows */
+    height: 30px;
+    cursor: pointer;
+}
+
+.point-click-controls img.arrow:hover {
+    opacity: 0.8; /* Adds a hover effect */
+}
+
+.point-click-controls button {
+    padding: 10px 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.point-click-controls button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+}
+
+/* Highlight active button */
+.point-click-controls button.active {
+    color: #E3D15B; /* Active button text color */
+    font-weight: bold; /* Makes the text bold */
+    border-bottom: 2px solid #E3D15B; /* Optional: underline or border */
+}
+
+
+
