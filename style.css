@@ -1,0 +1,479 @@
+
+/* Adjusting navigation dot colors */
+#fp-nav ul li a span {
+    background-color: white;
+}
+
+
+
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 6em;
+}
+p{
+	font-size: 2em;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.section{
+	text-align:center;
+}
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+.twitter-share-button{
+	position: fixed !important;
+	z-index: 99;
+	right: 149px;
+	top: 9px;
+}
+#infoMenu{
+	height: 20px;
+	color: #f2f2f2;
+	position:fixed;
+	z-index:70;
+	bottom:0;
+	width:100%;
+	text-align:right;
+	font-size:0.9em;
+	padding:8px 0 8px 0;
+}
+#infoMenu ul{
+	padding: 0 40px;
+}
+#infoMenu li a{
+	display: block;
+	margin: 0 22px 0 0;
+	color: #333;
+}
+#infoMenu li a:hover{
+	text-decoration:underline;
+}
+#infoMenu li{
+	display:inline-block;
+	position:relative;
+}
+#examplesList{
+	display:none;
+	background: #282828;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 20px;
+	float: left;
+	position: absolute;
+	bottom: 29px;
+	right: 0;
+	width:822px;
+	text-align:left;
+}
+#examplesList ul{
+	padding:0;
+}
+#examplesList ul li{
+	display:block;
+	margin: 5px 0;
+}
+#examplesList ul li a{
+	color: #BDBDBD;
+	margin:0;
+}
+#examplesList ul li a:hover{
+	color: #f2f2f2;
+}
+#examplesList .column{
+	float: left;
+	margin: 0 20px 0 0;
+}
+#examplesList h3{
+	color: #f2f2f2;
+	font-size: 1.2em;
+	margin: 0 0 15px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	padding: 0 0 5px 0;
+}
+
+
+
+/* Demos Menu
+ * --------------------------------------- */
+ #demosMenu{
+	position:fixed;
+	top: 20px;
+	right:20px;
+	z-index: 999;
+	padding: 5px 10px;
+ }
+
+/* Buttons
+ * --------------------------------------- */
+#download a{
+    text-decoration: none
+}
+#download,
+#download:hover {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25)
+}
+.button {
+    margin: 20px 0 0 0;
+    vertical-align: middle;
+    display: inline-block
+}
+
+.button a {
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    padding: 15px 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.button a:hover {
+    color: #316f68;
+    background-color: #fff
+}
+
+
+/* Extensions preview menu
+ * --------------------------------------- */
+.preview-extensions-menu{
+	position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    border-top: 0;
+    box-shadow: 1px 0px 3px rgba(0,0,0,0.8);
+}
+.preview-extensions-menu li{
+	display: inline-block;
+	margin: 0;
+}
+.preview-extensions-menu li a{
+	padding: 15px 25px;
+	display: block;
+}
+.preview-buy-extension{
+    background: #3cc63c;
+}
+.preview-more-extensions{
+	background: #fff;
+}
+.preview-buy-extension a{
+	color: #fff;
+}
+.preview-buy-extension:hover{
+	background-color: #1a961a;
+}
+.preview-more-extensions a{
+	color: #333;
+}
+
+.code{
+	background: rgba(255,255,255,0.7);
+	padding: 0px 5px;
+	line-height: 25px;
+}
+
+
+/* Style for our header texts
+* --------------------------------------- */
+h1{
+	font-size: 5em;
+	font-family: arial,helvetica;
+	color: #fff;
+	margin:0;
+}
+.section p,
+.intro p{
+	color: #fff;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+	text-align:center;
+}
+
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+	color: #fff;
+}
+
+/* Sections backgrounds
+* --------------------------------------- */
+#section0{
+	background-image: linear-gradient(128deg,#40afff,#3f61ff);
+}
+
+#section1{
+	background-image: linear-gradient(128deg,#ff9a3f,#ff4b40);
+}
+
+#section2{
+	background-image: linear-gradient(128deg,#fc40ff,#543fff);
+}
+
+#section3{
+	background-image: linear-gradient(128deg,#40fff2,#3fbcff);
+}
+
+
+
+
+/* style for page 2 3 4 */
+    /* Container for Image and Text */
+.container {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center the container */
+    gap: 20px; /* Space between the image and text */
+    padding: 20px; /* Adds space inside the container */
+    max-width: 84%; /* Limits the overall width */
+    margin: 0 auto; /* Centers the container on the page */
+}
+
+
+
+/* Image Container */
+.image-container {
+    flex: 1;
+	max-width: 50%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0 40px 0 0;
+    transition: max-width 0.5s ease-in-out; /* Smooth zoom effect */
+}
+
+.image-container:hover {
+    max-width: 55%; /* Change size smoothly on hover */
+}
+
+
+/* Image Slider */
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    width: calc(100%); /* Dynamically set based on the number of slides */
+}
+
+/* Each Image Wrapper */
+.image-wrapper {
+    flex-shrink: 0;
+    width: 100%; /* Each slide takes full width of the container */
+    height: auto;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Prevent interaction with the video */
+}
+
+.image-wrapper:hover video {
+    opacity: 1; /* Show video on hover */
+}
+
+
+
+
+
+
+/* Text Container */
+.text-container {
+    flex: 1; /* Takes up equal space with the image */
+    max-width: 40%; /* Ensures the text doesn't exceed half the width */
+    display: flex;
+    flex-direction: column; /* Stacks text and controls vertically */
+    justify-content: flex-start; /* Aligns content to the top */
+    text-align: left; /* Justifies text to the left */
+    gap: 15px; /* Space between elements */
+}
+
+.text-container h2, .text-container p, .text-container .details {
+    text-align: left; /* Ensures all child text elements are left-justified */
+}
+
+.text-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    line-height: 1.5; /* Improves readability */
+}
+
+.text-container .details {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.text-container .details a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Removes underline */
+}
+
+.text-container .details a:hover {
+    text-decoration: underline; /* Underlines on hover */
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    align-items: center; /* Centers the arrows and buttons */
+    gap: 10px; /* Space between controls */
+}
+
+.controls img.arrow {
+    width: 30px; /* Size of the arrows */
+    height: 30px;
+    cursor: pointer;
+}
+
+.controls img.arrow:hover {
+    opacity: 0.8; /* Adds a hover effect */
+}
+
+.controls button {
+    padding: 10px 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #888;
+}
+
+/* Highlight active button */
+.controls button.active {
+    color: #00ffff; /* Active button text color */
+    font-weight: bold; /* Makes the text bold */
+    border-bottom: 2px solid #00ffff; /* Optional: underline or border */
+}

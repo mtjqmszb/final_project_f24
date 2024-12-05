@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Puzzle Video Games</title>
+	<meta name="author" content="Your Name" />
+	<meta name="description" content="Explore the world of puzzle video games, their categories, and history." />
+	<meta name="keywords" content="puzzle games, Steam, video games, history, categories" />
+	<meta name="Resource-type" content="Document" />
+
+	<!-- Link to FullPage.js and Custom Styles -->
+	<link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+<ul id="menu">
+    <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
+    <li data-menuanchor="walkingSimulators"><a href="#walkingSimulators">Walking Simulators</a></li>
+    <li data-menuanchor="pointAndClick"><a href="#pointAndClick">Point & Click</a></li>
+    <li data-menuanchor="platformers"><a href="#platformers">Platformers</a></li>
+</ul>
+
+<div id="fullpage">
+    <!-- Home Section -->
+    <div class="section" id="section0">
+        <h1>Welcome to Puzzle Games World</h1>
+        <p>Discover the history, definition, and genres of puzzle video games.</p>
+    </div>
+
+    
+
+
+    <!-- Walking Simulators Section -->
+<div class="section" id="section1">
+    <h1>Walking Simulators</h1>
+    <div class="container">
+        <!-- Image Section -->
+        <div class="image-container">
+            <div class="image-slider">
+                <!-- Each slide with image and video -->
+                <div class="image-wrapper">
+                    <img src="img/Manifold_Garden_header.jpg" alt="Manifold Garden">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256803952/movie480_vp9.webm?t=1602099599" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/Return_of_the_Obra_Dinn_header.jpg" alt="Return of the Obra Dinn">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256728392/movie480.webm?t=1686697587" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/superliminal_header.jpg" alt="Superliminal">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256803623/movie480_vp9.webm?t=1602530552" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Section -->
+        <div class="text-container">
+            <h2 id="walkingTitle">Manifold Garden</h2>
+            <p id="walkingDescription">
+                Explore a mind-bending world of impossible geometry in Manifold Garden. Solve puzzles to uncover new perspectives and redefine gravity as you explore the infinite.
+            </p>
+            <div class="details">
+                <a href="https://store.steampowered.com/app/473950/Manifold_Garden/" target="_blank">Steam Page</a> |
+                <span>Rating: 4.5/5</span>
+            </div>
+            <div class="controls">
+                <img src="img/icon/left_arrow.png" alt="Previous" onclick="changeWalkingContent('prev')" class="arrow">
+                <button onclick="changeWalkingContent(1)">I</button>
+                <button onclick="changeWalkingContent(2)">II</button>
+                <button onclick="changeWalkingContent(3)">III</button>
+                <img src="img/icon/right_arrow.png" alt="Next" onclick="changeWalkingContent('next')" class="arrow">
+            </div>            
+        </div>
+    </div>
+</div>
+
+
+        
+
+
+
+
+    <!-- Point & Click Section -->
+    <div class="section" id="section2">
+        <h1>Point & Click Games</h1>
+        <div class="slide" id="slide1">
+            <h2>Game 1: Title</h2>
+            <p>Description and details about Game 1.</p>
+        </div>
+        <div class="slide" id="slide2">
+            <h2>Game 2: Title</h2>
+            <p>Description and details about Game 2.</p>
+        </div>
+        <div class="slide" id="slide3">
+            <h2>Game 3: Title</h2>
+            <p>Description and details about Game 3.</p>
+        </div>
+    </div>
+
+    <!-- Platformers Section -->
+    <div class="section" id="section3">
+        <h1>Platformers</h1>
+        <div class="slide" id="slide1">
+            <h2>Game 1: Title</h2>
+            <p>Description and details about Game 1.</p>
+        </div>
+        <div class="slide" id="slide2">
+            <h2>Game 2: Title</h2>
+            <p>Description and details about Game 2.</p>
+        </div>
+        <div class="slide" id="slide3">
+            <h2>Game 3: Title</h2>
+            <p>Description and details about Game 3.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Link to FullPage.js Script -->
+<script type="text/javascript" src="dist/fullpage.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke'],
+        anchors: ['home', 'walkingSimulators', 'pointAndClick', 'platformers'],
+        menu: '#menu',
+        navigation: true, // Enables navigation dots
+        slidesNavigation: true, // Enables navigation for slides
+        lazyLoad: true,
+        controlArrows: false, // Removes arrows for horizontal slides
+        credits: {enabled: false}
+    });
+</script>
+<script src="puzzle.js"></script>
+
+
+</body>
+</html>
