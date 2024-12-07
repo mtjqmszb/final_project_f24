@@ -49,8 +49,29 @@ const walkingContent = [
             rating: "4.7/5"
         },
         video: "https://video.fastly.steamstatic.com/store_trailers/256803623/movie480_vp9.webm?t=1602530552"
+    },
+    {
+        image: "img/WS/The_Unfinished_Swan_header.jpg",
+        title: "The Unfinished Swan",
+        description: "Embark on a magical journey through an unfinished world full of mystery and wonder in this visually unique game.",
+        details: {
+            link: "https://store.steampowered.com/app/325610/The_Unfinished_Swan/",
+            rating: "4.5/5"
+        },
+        video: "https://video.fastly.steamstatic.com/store_trailers/256797664/movie480_vp9.webm?t=1599753080"
+    },
+    {
+        image: "img/WS/Frame_of_Mind_header.jpg",
+        title: "Frame of Mind",
+        description: "Challenge your perception in Frame of Mind, a psychological puzzle platformer exploring the concept of reality and imagination.",
+        details: {
+            link: "https://store.steampowered.com/app/1515670/Frame_of_Mind/",
+            rating: "4.4/5"
+        },
+        video: "https://video.fastly.steamstatic.com/store_trailers/256810994/movie480_vp9.webm?t=1610443343"
     }
 ];
+
 
 
 
@@ -276,3 +297,121 @@ document.addEventListener('DOMContentLoaded', () => {
     changePointContent(1); // Activate the first slide
 });
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Data for Platformers
+const platformerContent = [
+    {
+        image: "img/PF/GRIS_header.jpg",
+        title: "GRIS",
+        description: "A serene and evocative experience, free of danger or frustration. Explore a world brought to life with delicate art and animation.",
+        details: {
+            link: "https://store.steampowered.com/app/683320/GRIS/",
+            rating: "4.9/5"
+        },
+        video: "https://video.fastly.steamstatic.com/store_trailers/256738119/movie480.webm?t=1544618804"
+    },
+    {
+        image: "img/PF/LIMBO_header.jpg",
+        title: "LIMBO",
+        description: "Uncertain of his sister's fate, a boy enters LIMBO. A haunting and atmospheric puzzle-platformer.",
+        details: {
+            link: "https://store.steampowered.com/app/48000/LIMBO/",
+            rating: "4.8/5"
+        },
+        video: "https://video.fastly.steamstatic.com/store_trailers/256828212/movie480_vp9.webm?t=1617191650"
+    },
+    {
+        image: "img/PF/FAR_Lone_Sails_header.jpg",
+        title: "FAR: Lone Sails",
+        description: "Traverse a dried-out sea in a unique landship, solving puzzles and uncovering the remnants of a once-prosperous world.",
+        details: {
+            link: "https://store.steampowered.com/app/609320/FAR_Lone_Sails/",
+            rating: "4.7/5"
+        },
+        video: "https://video.fastly.steamstatic.com/store_trailers/256711611/movie480.webm?t=1521110522"
+    },
+    {
+        image: "img/PF/Pikuniku_header.jpg",
+        title: "Pikuniku",
+        description: "A delightful dystopian adventure that will make you laugh while uncovering a conspiracy.",
+        details: {
+            link: "https://store.steampowered.com/app/572890/Pikuniku/",
+            rating: "4.6/5"
+        },
+        video: "https://video.fastly.steamstatic.com/store_trailers/256741328/movie480.webm?t=1548346313"
+    },
+    {
+        image: "img/PF/Hue_header.jpg",
+        title: "Hue",
+        description: "A vibrant, award-winning puzzle-platformer where you alter the world by changing its background color.",
+        details: {
+            link: "https://store.steampowered.com/app/383270/Hue/",
+            rating: "4.5/5"
+        },
+        video: "https://video.fastly.steamstatic.com/store_trailers/256669861/movie480.webm?t=1474553838"
+    },
+    {
+        image: "img/PF/FRAMED_header.jpg",
+        title: "FRAMED",
+        description: "A noir-puzzle game where you rearrange comic panels to change the outcome of the story.",
+        details: {
+            link: "https://store.steampowered.com/app/322450/FRAMED_Collection/",
+            rating: "4.4/5"
+        },
+        video: "https://video.fastly.steamstatic.com/store_trailers/256717071/movie480.webm?t=1552292699"
+    },
+    {
+        image: "img/PF/Firework_header.jpg",
+        title: "Firework",
+        description: "A thrilling puzzle-platformer that explores themes of sacrifice, fear, and determination.",
+        details: {
+            link: "https://store.steampowered.com/app/1371470/Firework/",
+            rating: "4.3/5"
+        },
+        video: "https://video.fastly.steamstatic.com/store_trailers/256853450/movie480_vp9.webm?t=1632974722"
+    }
+];
+
+// Add changePlatformerContent function
+let currentPlatformerIndex = 0;
+
+function changePlatformerContent(direction) {
+    const slider = document.querySelector('.platformer-slider');
+    const buttons = document.querySelectorAll('.platformer-controls button');
+
+    // Update currentPlatformerIndex based on direction
+    if (direction === 'next') {
+        currentPlatformerIndex = (currentPlatformerIndex + 1) % platformerContent.length;
+    } else if (direction === 'prev') {
+        currentPlatformerIndex = (currentPlatformerIndex - 1 + platformerContent.length) % platformerContent.length;
+    } else if (typeof direction === 'number') {
+        currentPlatformerIndex = direction - 1;
+    }
+
+    // Move the slider
+    slider.style.transform = `translateX(-${currentPlatformerIndex * 100}%)`;
+
+    // Update text content
+    document.getElementById("platformerTitle").textContent = platformerContent[currentPlatformerIndex].title;
+    document.getElementById("platformerDescription").textContent = platformerContent[currentPlatformerIndex].description;
+    document.querySelector(".platformer-details a").href = platformerContent[currentPlatformerIndex].details.link;
+    document.querySelector(".platformer-details span").textContent = `Rating: ${platformerContent[currentPlatformerIndex].details.rating}`;
+
+    // Update active button styling
+    buttons.forEach((button, index) => {
+        if (index === currentPlatformerIndex) {
+            button.classList.add('active'); // Highlight current button
+        } else {
+            button.classList.remove('active'); // Remove highlight from others
+        }
+    });
+}
+
+// Initialize Platformers section
+document.addEventListener('DOMContentLoaded', () => {
+    changePlatformerContent(1);
+});

@@ -490,7 +490,7 @@ h2 {
 
 
 
-
+/* ———————————————————————————————————————————————————————————————————————————————————————————————————— */
 
 /* style for point & click */
 
@@ -633,3 +633,144 @@ h2 {
 
 
 
+/* ———————————————————————————————————————————————————————————————————————————————————————————————————— */
+
+/* Platformers Section */
+
+/* Image Container */
+.platformer-container {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0 40px 0 0;
+    transition: max-width 0.5s ease-in-out; /* Smooth zoom effect */
+}
+
+.platformer-container:hover {
+    max-width: 60%; /* Change size smoothly on hover */
+}
+
+/* Slider */
+.platformer-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    width: calc(100%); /* Dynamically set based on the number of slides */
+}
+
+/* Each Image Wrapper */
+.platformer-image-wrapper {
+    flex-shrink: 0;
+    width: 100%; /* Each slide takes full width of the container */
+    height: auto; /* Adjust automatically based on aspect ratio */
+    position: relative;
+    aspect-ratio: 16 / 9; /* Adjust this to match your image's aspect ratio */
+    overflow: hidden; /* Ensures content outside the container is hidden */
+    transition: transform 0.5s ease-in-out;
+}
+
+.platformer-image-wrapper:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.platformer-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.platformer-image-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none; /* Prevent interaction with the video */
+}
+
+.platformer-image-wrapper:hover video {
+    opacity: 1; /* Show video on hover */
+}
+
+/* Text Container */
+.platformer-text-container {
+    flex: 1; /* Takes up equal space with the image */
+    max-width: 40%; /* Ensures the text doesn't exceed half the width */
+    display: flex;
+    flex-direction: column; /* Stacks text and controls vertically */
+    justify-content: flex-start; /* Aligns content to the top */
+    text-align: left; /* Justifies text to the left */
+    gap: 15px; /* Space between elements */
+}
+
+.platformer-text-container h2,
+.platformer-text-container p,
+.platformer-text-container .details {
+    text-align: left; /* Ensures all child text elements are left-justified */
+}
+
+.platformer-text-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.platformer-text-container p {
+    font-size: 1.2rem;
+    line-height: 1.5; /* Improves readability */
+}
+
+.platformer-text-container .details {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #E3D15B;
+}
+
+.platformer-text-container .details a {
+    color: #3E79A8; /* Link color */
+    text-decoration: none; /* Removes underline */
+}
+
+.platformer-text-container .details a:hover {
+    text-decoration: underline; /* Underlines on hover */
+}
+
+/* Controls Section */
+.platformer-controls {
+    display: flex;
+    align-items: center; /* Centers the arrows and buttons */
+    gap: 10px; /* Space between controls */
+}
+
+.platformer-controls img.arrow {
+    width: 30px; /* Size of the arrows */
+    height: 30px;
+    cursor: pointer;
+}
+
+.platformer-controls img.arrow:hover {
+    opacity: 0.8; /* Adds a hover effect */
+}
+
+.platformer-controls button {
+    padding: 10px 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.platformer-controls button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+}
+
+/* Highlight active button */
+.platformer-controls button.active {
+    color: #E3D15B; /* Active button text color */
+    font-weight: bold; /* Makes the text bold */
+    border-bottom: 2px solid #E3D15B; /* Optional: underline or border */
+}

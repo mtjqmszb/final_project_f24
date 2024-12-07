@@ -80,6 +80,22 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
+                <!-- The Unfinished Swan -->
+                <div class="image-wrapper">
+                    <img src="img/WS/The_Unfinished_Swan_header.jpg" alt="The Unfinished Swan">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256797664/movie480_vp9.webm?t=1599753080" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Frame of Mind -->
+                <div class="image-wrapper">
+                    <img src="img/WS/Frame_of_Mind_header.jpg" alt="Frame of Mind">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256810994/movie480_vp9.webm?t=1610443343" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
 
@@ -100,6 +116,8 @@
                 <button onclick="changeWalkingContent(3)">III</button>
                 <button onclick="changeWalkingContent(4)">IV</button>
                 <button onclick="changeWalkingContent(5)">V</button>
+                <button onclick="changeWalkingContent(6)">VI</button>
+                <button onclick="changeWalkingContent(7)">VII</button>
                 <img src="img/icon/right_arrow.png" alt="Next" onclick="changeWalkingContent('next')" class="arrow">
             </div>
         </div>
@@ -230,19 +248,92 @@
 
 
     <!-- Platformers Section -->
-    <div class="section" id="section3">
-        <h1>Platformers</h1>
-        <div class="slide" id="slide1">
-            <h2>Game 1: Title</h2>
-            <p>Description and details about Game 1.</p>
+<div class="section" id="section3">
+    <h1>Platformers</h1>
+    <div class="container">
+        <!-- Image Section -->
+        <div class="image-container">
+            <div class="platformer-slider">
+                <!-- GRIS -->
+                <div class="image-wrapper platformer-image-wrapper">
+                    <img src="img/PF/GRIS_header.jpg" alt="GRIS">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256738119/movie480.webm?t=1544618804" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- LIMBO -->
+                <div class="image-wrapper platformer-image-wrapper">
+                    <img src="img/PF/LIMBO_header.jpg" alt="LIMBO">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256828212/movie480_vp9.webm?t=1617191650" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- FAR: Lone Sails -->
+                <div class="image-wrapper platformer-image-wrapper">
+                    <img src="img/PF/FAR_Lone_Sails_header.jpg" alt="FAR: Lone Sails">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256711611/movie480.webm?t=1521110522" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Pikuniku -->
+                <div class="image-wrapper platformer-image-wrapper">
+                    <img src="img/PF/Pikuniku_header.jpg" alt="Pikuniku">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256741328/movie480.webm?t=1548346313" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Hue -->
+                <div class="image-wrapper platformer-image-wrapper">
+                    <img src="img/PF/Hue_header.jpg" alt="Hue">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256669861/movie480.webm?t=1474553838" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- FRAMED -->
+                <div class="image-wrapper platformer-image-wrapper">
+                    <img src="img/PF/FRAMED_header.jpg" alt="FRAMED">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256717071/movie480.webm?t=1552292699" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Firework -->
+                <div class="image-wrapper platformer-image-wrapper">
+                    <img src="img/PF/Firework_header.jpg" alt="Firework">
+                    <video muted loop>
+                        <source src="https://video.fastly.steamstatic.com/store_trailers/256853450/movie480_vp9.webm?t=1632974722" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>                
+            </div>
         </div>
-        <div class="slide" id="slide2">
-            <h2>Game 2: Title</h2>
-            <p>Description and details about Game 2.</p>
-        </div>
-        <div class="slide" id="slide3">
-            <h2>Game 3: Title</h2>
-            <p>Description and details about Game 3.</p>
+
+        <!-- Text Section -->
+        <div class="text-container">
+            <h2 id="platformerTitle">Celeste</h2>
+            <p id="platformerDescription">
+                Help Madeline survive her inner demons on her journey to the top of Celeste Mountain in this super-tight platformer.
+            </p>
+            <div class="details platformer-details">
+                <a href="https://store.steampowered.com/app/504230/Celeste/" target="_blank">Steam Page</a> |
+                <span>Rating: 4.9/5</span>
+            </div>
+            <div class="controls platformer-controls">
+                <img src="img/icon/left_arrow.png" alt="Previous" onclick="changePlatformerContent('prev')" class="arrow">
+                <button onclick="changePlatformerContent(1)">I</button>
+                <button onclick="changePlatformerContent(2)">II</button>
+                <button onclick="changePlatformerContent(3)">III</button>
+                <button onclick="changePlatformerContent(4)">IV</button>
+                <button onclick="changePlatformerContent(5)">V</button>
+                <button onclick="changePlatformerContent(6)">VI</button>
+                <button onclick="changePlatformerContent(7)">VII</button>
+                <img src="img/icon/right_arrow.png" alt="Next" onclick="changePlatformerContent('next')" class="arrow">
+            </div>
         </div>
     </div>
 </div>
