@@ -82,9 +82,9 @@ p{
 #menu li {
 	display:inline-block;
 	margin: 10px;
-	color: #000;
+	color: #888;
 	background:#fff;
-	background: rgba(255,255,255, 0.5);
+	background: rgba(255,255,255,0);
 	-webkit-border-radius: 10px;
             border-radius: 10px;
 }
@@ -95,13 +95,16 @@ p{
 }
 #menu li a{
 	text-decoration:none;
-	color: #000;
+	color: #E3D15B;
 }
 #menu li.active a:hover{
 	color: #000;
 }
-#menu li:hover{
-	background: rgba(255,255,255, 0.8);
+#menu li:hover{ 
+	background: rgba(255,255,255, 0.5);
+}
+#menu li a:hover{
+	color: #000;
 }
 #menu li a,
 #menu li.active a{
@@ -295,7 +298,7 @@ h1{
 /* Centered texts in each section
 * --------------------------------------- */
 .section{
-	text-align:center;
+	text-align:left;
 }
 
 
@@ -327,13 +330,95 @@ h1{
 
 /* ———————————————————————————————————————————————————————————————————————————————————————————————————— */
 
+h1 {
+    text-align: center;
+    font-family: "Georgia", serif, "Lucida Bright", arial, helvetica;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
 
 h2 {
     /* font-size: 3em; */
-	/* font-family: arial,helvetica; */
+	font-family: "Georgia", serif, "Lucida Bright", arial, helvetica;
 	color: #E3D15B;
 	margin:0;
 }
+
+p {
+    font-family: "Century Gothic","Gill Sans";
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————————————————————— */
+
+
+
+/* General Styling for Section 0 */
+#section0 {
+    display: flex; /* Align items horizontally */
+    justify-content: space-between; /* Add space between the two parts */
+    align-items: flex-start; /* Align content to the top */
+    padding: 40px 20px; /* Add spacing inside the section */
+    max-width: 100%; /* Limit the section width */
+    margin: 0 auto; /* Center the section on the page */
+    color: white; /* Ensure text is visible on dark backgrounds */
+    background-color: rgba(0, 0, 0, 0.8); /* Optional background for readability */
+}
+
+/* Styling for the Left Part */
+.home-left {
+    flex: 1; /* Take up equal space with the right side */
+    margin-right: 20px; /* Add space between the left and right parts */
+}
+
+.home-left h1 {
+    font-size: 2.5rem; /* Large header size */
+    margin-bottom: 20px;
+    color: #E3D15B; /* Bright yellow color for emphasis */
+}
+
+.home-left p {
+    font-size: 1.2rem; /* Readable text size */
+    line-height: 1.8; /* Improve text readability */
+}
+
+/* Styling for the Right Part */
+.home-right {
+    flex: 1; /* Take up equal space with the left side */
+}
+
+.home-right h2 {
+    font-size: 2rem; /* Header size for history */
+    margin-bottom: 15px;
+    color: #E3D15B; /* Bright yellow color for emphasis */
+}
+
+.home-right p {
+    font-size: 1.1rem; /* Slightly smaller text size for history */
+    line-height: 1.6; /* Improve text readability */
+    margin-bottom: 15px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #section0 {
+        flex-direction: column; /* Stack the left and right parts vertically */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .home-left, .home-right {
+        margin-right: 0; /* Remove side margins */
+    }
+
+    .home-left, .home-right {
+        flex: none; /* Reset flex to ensure full width */
+        width: 100%; /* Take up full width */
+    }
+
+    .home-right h2 {
+        margin-top: 20px; /* Add spacing between sections */
+    }
+}
+
 
 
 /* ———————————————————————————————————————————————————————————————————————————————————————————————————— */
@@ -413,7 +498,7 @@ h2 {
 /* Text Container */
 .text-container {
     flex: 1; /* Takes up equal space with the image */
-    max-width: 40%; /* Ensures the text doesn't exceed half the width */
+    max-width: 40%; 
     display: flex;
     flex-direction: column; /* Stacks text and controls vertically */
     justify-content: flex-start; /* Aligns content to the top */
@@ -433,6 +518,7 @@ h2 {
 .text-container p {
     font-size: 1.2rem;
     line-height: 1.5; /* Improves readability */
+    height: 120px;
 }
 
 .text-container .details {
@@ -576,6 +662,7 @@ h2 {
 .point-click-text-container p {
     font-size: 1.2rem;
     line-height: 1.5; /* Improves readability */
+    height: 120px;
 }
 
 .point-click-text-container .details {
@@ -720,6 +807,7 @@ h2 {
 .platformer-text-container p {
     font-size: 1.2rem;
     line-height: 1.5; /* Improves readability */
+    height: 120px;
 }
 
 .platformer-text-container .details {
